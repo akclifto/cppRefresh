@@ -125,7 +125,7 @@ This section will provide general syntax structure for OOP in C++.
 
 A base class is the parent class. A derived class is the inheriting class to the base class.  A derived class can inherit from multiple base classes.  
 Syntax:  ```class derived-class-name: access-specifier base-class-name```  
-Example: ```class someInheritedClass: public someBaseClass, someOtherBaseClass```
+Example: ```class someInheritedClass: public someBaseClass, public someOtherBaseClass```
 
 ```cpp
 class baseClass {
