@@ -1,4 +1,4 @@
-# Cpp refresher
+# Cpp Refresher
 
 It's been a while. Some review:
 
@@ -131,13 +131,15 @@ Example: ```class someInheritedClass: public someBaseClass, someOtherBaseClass``
 class baseClass {
     public:
         void setName(std::string n) {  
-            name = n; //ensure the input name param is different from the name var (ie, `name = name` will produce null)
+            name = n; //ensure the input name param is different from the name var 
+            // (ie, `name = name` will produce null)
         }
 
     protected:
         std::string name;
 };
 
+// inherited class
 class derivedClass: public baseClass {
     public:
         std::string getName() {
