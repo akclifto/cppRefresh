@@ -84,7 +84,7 @@ A reference variable is an alias, that is, another name for an already existing 
 ```cpp
 int i = 5;      // variable
 int &k = i;     // initialize reference to i
-std:cout << k << endl; // access value of k reference, which is same as i;
+std:cout << k << std::endl; // access value of k reference, which is same as i;
 ```
 
 ## Pointers to Structures
@@ -108,7 +108,7 @@ int main() {
     strcpy( Book1.title, "Learn C++ Programming");
     strcpy( Book1.author, "Chand Miyan");
 
-    std::cout << "Book1 title: " << structPointer->title << endl;
+    std::cout << "Book1 title: " << structPointer->title << std::endl;
 }
 ```
 
@@ -154,7 +154,7 @@ int main() {
     derivedClass d;
 
     d.setName("John");
-    cout << d.getName() << endl; //prints John
+    std::cout << d.getName() << std::endl; //prints John
 }
 ```
 
