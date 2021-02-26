@@ -68,4 +68,3 @@ A reference variable is an alias, that is, another name for an already existing 
 - Cannot have NULL references, can have NULL pointers.  
 - Once a reference is initialized to an object, it cannot be changes to refer to another object.  
 - A reference has to be initialized when it is created.  Pointers can be initialized at any time.
-
