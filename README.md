@@ -10,6 +10,7 @@ It's been a while. Some review:
 - [References](#References)
 - [Pointers to Structures](#Pointers-to-Structures)
 - [OOP with Cpp](#OOP-with-Cpp)
+- [Inheritance](#Inheritance)
 
 ## Integer Literals
 
