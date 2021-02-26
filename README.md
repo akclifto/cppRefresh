@@ -1,6 +1,6 @@
 # Cpp refresher
 
-It's been a while.  Some review:
+It's been a while. Some review:
 
 ## Integer Literals
 
@@ -8,7 +8,7 @@ An integer literal can be a decimal, octal, or hexadecimal constant. A prefix sp
 
 An integer literal can also have a suffix that is a combination of U and L, for unsigned and long, respectively. The suffix can be uppercase or lowercase and can be in any order.
 
-Examples of Integer literals:  
+Examples of Integer literals:
 
 ```cpp
 212         // Legal
@@ -18,7 +18,7 @@ Examples of Integer literals:
 032UU       // Illegal: cannot repeat a suffix
 ```
 
-Examples of TYPES of integer literals:  
+Examples of TYPES of integer literals:
 
 ```cpp
 85         // decimal
@@ -46,11 +46,11 @@ While representing using decimal form, you must include the decimal point, the e
 
 ## Pointers
 
-There are few important operations, which we will do with the pointers very frequently.  
+There are few important operations, which we will do with the pointers very frequently.
 
-- (a) We define a pointer variable.  
-- (b) Assign the address of a variable to a pointer.  
-- (c) Finally access the value at the address available in the pointer variable.  
+- (a) We define a pointer variable.
+- (b) Assign the address of a variable to a pointer.
+- (c) Finally access the value at the address available in the pointer variable.
 
 ```cpp
 int var = 340;      // variable
@@ -59,15 +59,15 @@ pointer = &var;     // set pointer to address of var
 std::cout << *pointer; //access value of var through "*" pointer
 ```
 
-## References  
+## References
 
 A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable.
 
 ### Differences between References and Pointers
 
-- Cannot have NULL references, can have NULL pointers.  
-- Once a reference is initialized to an object, it cannot be changes to refer to another object.  
-- A reference has to be initialized when it is created.  Pointers can be initialized at any time.
+- Cannot have NULL references, can have NULL pointers.
+- Once a reference is initialized to an object, it cannot be changes to refer to another object.
+- A reference has to be initialized when it is created. Pointers can be initialized at any time.
 
 ```cpp
 int i = 5;      // variable
@@ -77,10 +77,10 @@ std:cout << k << endl; // access value of k reference, which is same as i;
 
 ## Pointers to Structures
 
-Pointers to structures are defined just like pointers to variables. Define the pointer, assign the address, and then access the value at the address in the pointer.  
+Pointers to structures are defined just like pointers to variables. Define the pointer, assign the address, and then access the value at the address in the pointer.
 
 To access the value at the address in the pointer, use the arrow `->`.
-In Java, this would just be Book1.title.  In cpp, it is 
+In Java, this would just be Book1.title. In cpp, it is
 
 ```cpp
 struct Books {
@@ -94,7 +94,7 @@ int main() {
     structPointer = &Book1;
 
     strcpy( Book1.title, "Learn C++ Programming");
-    strcpy( Book1.author, "Chand Miyan"); 
+    strcpy( Book1.author, "Chand Miyan");
 
     std::cout << "Book1 title: " << structPointer->title << endl;
 }
