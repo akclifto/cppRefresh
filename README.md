@@ -61,5 +61,11 @@ std::cout << *pointer; //access value of var through "*" pointer
 
 ## References  
 
+A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable.
 
+### Differences between References and Pointers
+
+- Cannot have NULL references, can have NULL pointers.  
+- Once a reference is initialized to an object, it cannot be changes to refer to another object.  
+- A reference has to be initialized when it is created.  Pointers can be initialized at any time.
 
