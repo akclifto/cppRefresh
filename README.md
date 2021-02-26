@@ -68,3 +68,42 @@ A reference variable is an alias, that is, another name for an already existing 
 - Cannot have NULL references, can have NULL pointers.  
 - Once a reference is initialized to an object, it cannot be changes to refer to another object.  
 - A reference has to be initialized when it is created.  Pointers can be initialized at any time.
+
+```cpp
+int i = 5;      // variable
+int &k = i;     // initialize reference to i
+std:cout << k << endl; // access value of k reference, which is same as i;
+```
+
+## Pointers to Structures
+
+Pointers to structures are defined just like pointers to variables. Define the pointer, assign the address, and then access the value at the address in the pointer.  
+
+To access the value at the address in the pointer, use the arrow `->`.
+In Java, this would just be Book1.title.  In cpp, it is 
+
+```cpp
+struct Books {
+    char title[50];
+    char auther[50];
+}
+
+int main() {
+    struct Books Book1;
+    struct Books *structPointer;
+    structPointer = &Book1;
+
+    strcpy( Book1.title, "Learn C++ Programming");
+    strcpy( Book1.author, "Chand Miyan"); 
+
+    std::cout << "Book1 title: " << structPointer->title << endl;
+}
+```
+
+You can use `typedef` keyword for non-structs to make a bunch of pointers at once under the same variable name:
+
+```cpp
+typedef long int *pint32;
+
+pint32 x,y,z; // x,y,z are all pointers to long int
+```
