@@ -2,6 +2,15 @@
 
 It's been a while. Some review:
 
+## Contents
+
+- [Integer Literals](#Integer-Literals)
+- [Floating Point Literals](#Floating-Point-Literals)
+- [Pointers](#Pointers)
+- [References](#References)
+- [Pointers to Structures](#Pointers-to-Structures)
+- [OOP with Cpp](#OOP-with-Cpp)
+
 ## Integer Literals
 
 An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the base or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.
@@ -30,7 +39,7 @@ Examples of TYPES of integer literals:
 30ul       // unsigned long
 ```
 
-## Floating point literals
+## Floating Point Literals
 
 A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent part. You can represent floating point literals either in decimal form or exponential form.
 
@@ -106,4 +115,40 @@ You can use `typedef` keyword for non-structs to make a bunch of pointers at onc
 typedef long int *pint32;
 
 pint32 x,y,z; // x,y,z are all pointers to long int
+```
+
+## OOP with Cpp
+
+This section will provide general syntax structure for OOP in C++.
+
+## Inheritance
+
+A base class is the parent class. A derived class is the inheriting class to the base class.  A derived class can inherit from multiple base classes.  
+Syntax:  ```class derived-class-name: access-specifier base-class-name```  
+Example: ```class someInheritedClass: public someBaseClass, someOtherBaseClass```
+
+```cpp
+class baseClass {
+    public:
+        void setName(std::string n) {  
+            name = n; //ensure the input name param is different from the name var (ie, `name = name` will produce null)
+        }
+
+    protected:
+        std::string name;
+};
+
+class derivedClass: public baseClass {
+    public:
+        std::string getName() {
+            return name;
+        }
+};
+
+int main() {
+    derivedClass d;
+
+    d.setName("John");
+    cout << d.getName() << endl; //prints John
+}
 ```
