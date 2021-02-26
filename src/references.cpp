@@ -2,8 +2,8 @@
 
 int main()
 {
-    int i;
-    double d;
+    int i = 10;
+    double d = 5.0;
 
     // declare reference variables
     int &r = i;

@@ -11,6 +11,8 @@ It's been a while. Some review:
 - [Pointers to Structures](#Pointers-to-Structures)
 - [OOP with Cpp](#OOP-with-Cpp)
 - [Inheritance](#Inheritance)
+- [Overloading Functions](#Overloading-(Functions))
+- [Overloading Operators](#Overloading-(Operators))
 
 ## Integer Literals
 
@@ -155,3 +157,7 @@ int main() {
     cout << d.getName() << endl; //prints John
 }
 ```
+
+## Overloading (Functions)
+
+## Overloading (Operators)
