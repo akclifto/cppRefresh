@@ -130,6 +130,10 @@ A base class is the parent class. A derived class is the inheriting class to the
 Syntax:  ```class derived-class-name: access-specifier base-class-name```  
 Example: ```class someInheritedClass: public someBaseClass, public someOtherBaseClass```
 
+### Warning
+
+It is bad practice to inherit from multiple base classes in the same file.  Doing this can create the diamond pattern inheritance.  It is better to take a linear inheritance approach, and stack base/derived classes.  
+
 ```cpp
 class baseClass {
     public:
