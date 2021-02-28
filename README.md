@@ -4,17 +4,20 @@ It's been a while. Some review:
 
 ## Contents
 
-- [Integer Literals](#Integer-Literals)
-- [Floating Point Literals](#Floating-Point-Literals)
-- [Pointers](#Pointers)
-- [References](#References)
-- [Pointers to Structures](#Pointers-to-Structures)
+- [Cpp Overview](#Cpp-Overview)
+  - [Integer Literals](#Integer-Literals)
+  - [Floating Point Literals](#Floating-Point-Literals)
+  - [Pointers](#Pointers)
+  - [References](#References)
+  - [Pointers to Structures](#Pointers-to-Structures)
 - [OOP with Cpp](#OOP-with-Cpp)
-- [Inheritance](#Inheritance)
-- [Overloading Functions](#Overloading-(Functions))
-- [Overloading Operators](#Overloading-(Operators))
+  - [Inheritance](#Inheritance)
+  - [Overloading Functions](#Overloading-(Functions))
+  - [Overloading Operators](#Overloading-(Operators))
 
-## Integer Literals
+## Cpp Overview
+
+### Integer Literals
 
 An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the base or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.
 
@@ -42,7 +45,7 @@ Examples of TYPES of integer literals:
 30ul       // unsigned long
 ```
 
-## Floating Point Literals
+### Floating Point Literals
 
 A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent part. You can represent floating point literals either in decimal form or exponential form.
 
@@ -56,7 +59,7 @@ While representing using decimal form, you must include the decimal point, the e
 .e55          // Illegal: missing integer or fraction
 ```
 
-## Pointers
+### Pointers
 
 There are few important operations, which we will do with the pointers very frequently.
 
@@ -71,11 +74,11 @@ pointer = &var;     // set pointer to address of var
 std::cout << *pointer; //access value of var through "*" pointer
 ```
 
-## References
+### References
 
 A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable.
 
-### Differences between References and Pointers
+#### Differences between References and Pointers
 
 - Cannot have NULL references, can have NULL pointers.
 - Once a reference is initialized to an object, it cannot be changes to refer to another object.
@@ -87,7 +90,7 @@ int &k = i;     // initialize reference to i
 std:cout << k << std::endl; // access value of k reference, which is same as i;
 ```
 
-## Pointers to Structures
+### Pointers to Structures
 
 Pointers to structures are defined just like pointers to variables. Define the pointer, assign the address, and then access the value at the address in the pointer.
 
@@ -124,13 +127,13 @@ pint32 x,y,z; // x,y,z are all pointers to long int
 
 This section will provide general syntax structure for OOP in C++.
 
-## Inheritance
+### Inheritance
 
 A base class is the parent class. A derived class is the inheriting class to the base class.  A derived class can inherit from multiple base classes.  
 Syntax:  ```class derived-class-name: access-specifier base-class-name```  
 Example: ```class someInheritedClass: public someBaseClass, public someOtherBaseClass```
 
-### Warning
+#### Warning
 
 It is bad practice to inherit from multiple base classes in the same file.  Doing this can create the diamond pattern inheritance.  It is better to take a linear inheritance approach, and stack base/derived classes.  
 
@@ -162,6 +165,6 @@ int main() {
 }
 ```
 
-## Overloading (Functions)
+### Overloading (Functions)
 
-## Overloading (Operators)
+### Overloading (Operators)
