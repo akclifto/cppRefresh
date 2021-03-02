@@ -554,6 +554,8 @@ int main() {
 }
 ```
 
+[Back to Top](#Contents)
+
 ### Namespaces
 
 ### Templates
