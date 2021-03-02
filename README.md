@@ -195,6 +195,6 @@ This is used mainly to perform some operation on object and return something.
 | |= |  *= | <<= | >>= |  [] |  () |
 | -> | ->* | new | new [] | delete | delete []
 
-|Non-overloadable operators | | |
+|Non-overloadable operators| | | |
 | :-:| :-:| :-:| :-:|
 | :: | .* | .  | ?: |
