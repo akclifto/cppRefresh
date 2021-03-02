@@ -92,7 +92,7 @@ std::cout << *pointer; //access value of var through "*" pointer
 
 ### References
 
-A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable.  
+A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable.  See `references.cpp` for example.
 
 [Back to Top](#Contents)
 
@@ -349,7 +349,7 @@ pure virtual functions force derived classes to override them to implement.  If 
 You have to open a file before you can read it. Here is standard syntax for `open()`, which is member of `ifstream`, `ofstream`, `fstream` objects.
 
 ```cpp
-// open( <file-to-open/read/write>, <ios mode> )
+// open( <file-to-open/read/write>, <ios mode flag> )
 void open(const char *filename, ios::openmode mode);
 ```
 
@@ -433,6 +433,7 @@ void function(int a, int b){
 
 //custom exception handling
 struct MyException : public exception {
+    // override exception classes what() function to return custom handling.
     const char *what() const throw() {
         return "Customer expection message";
     }
@@ -474,7 +475,65 @@ void anotherFunction(int a) {
 
 ### Dynamic Memory  
 
-`The Good Stuff`
+- `The Stack`:  Automatic memory allocation.  All variable within functions use stack memory unless designated by programmer.
+- `The Heap` :  Unused memory within program that can be allocated dynamically when the program runs.
+
+Memory gets allocated using the `new` operator keyword: `List list = new List();` This `new` keyword allocates memory for the data-type.  
+Memory can be deleted using the `delete` operator keyword: `delete list;` This is used when you're done with a dynamically created object and want to free up memory.  
+
+```cpp
+double *pointerVar = NULL; // pointer initialized to NULL
+pointerVar = new double;  // request memory for new data var of type double
+
+// use the pointerVar in some code
+
+delete pointerVar;  // delete pointerVar from memory when done with it to free up system memory.
+```
+
+Sometimes memory allocation runs out, so be sure to handle:
+
+```cpp
+double *value = NULL;
+if( !(value = new double)) {
+    std::cout << "Uh-Oh! Out of memory" << std::endl;
+    // derp handling
+    exit(1);
+}
+```
+
+`malloc()` exists in Cpp but is not advised to use it.  The `new` keyword replaces `malloc()` and is better than using `malloc()`.  
+The advantage of `new` is that is allocates memory and also constructs objects for you.  This is OOP and the very purpose of Cpp's creation: to be OOP.
+
+Array allocation:
+
+```cpp
+// standard array
+char *arr = NULL;
+arr = new char[20];
+
+// use arr in code
+
+delete [] arr; // free up when done.
+```
+
+Multi-dimensional array allocation:
+
+```cpp
+// using double pointer here for dimension pointer.
+double **mdArr = NULL;
+mdArr = new double[4][5];
+
+// use mdArr in consider
+
+delete [] mdArr; // free up memory when done
+
+```
+
+Dynamic allocation for objects:
+
+```cpp
+
+```
 
 ### Namespaces
 
