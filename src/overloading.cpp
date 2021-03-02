@@ -13,7 +13,7 @@ class Box {
         }
 
         // here is the overloaded operator that is going to add two box objects together;
-        Box operator+(const Box& b) {
+        Box operator+(const Box &b) {
             Box box;
             box.length = this->length + b.length;
             box.width = this->width + b.width;

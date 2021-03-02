@@ -341,6 +341,45 @@ pure virtual functions force derived classes to override them to implement.  If 
 
 ### Files and Streams
 
+- `ofstream`:  used to create and write to files.
+- `ifstream`:  used as input stream to read from files.
+- `fstream`: general stream that can doing duties of both `ofstream` and `ifstream`
+- `iostream`: console read in and out.  Uses `cin` and `cout`.
+
+You have to open a file before you can read it. Here is standard syntax for `open()`, which is member of `ifstream`, `ofstream`, `fstream` objects.
+
+```cpp
+// open( <file-to-open/read/write>, <ios mode> )
+void open(const char *filename, ios::openmode mode);
+```
+
+#### Mode flags
+
+- `ios::app` : Append mode.  All output to that file is appended to the end of the file.
+- `ios::ate` : Open file for output and move the read/write control to the end of the file.
+- `ios::in`  : Open file for reading.
+- `ios::out` : Open file for writing.
+- `ios::trunc` : If the file exists, its contents will be truncated (shortened or reduced) before opening.
+
+You can OR operator to combine ios modes together:
+
+```cpp
+// write to file
+ofstream outfile;
+outfile.open("file.dat", ios::out | ios::trunc );
+
+// read and write to file
+fstream myFile
+myFile.open("file.dat", ios::out | ios::in );
+```
+
+To close a file, `void close();`
+
+- `<<` : output operator (writing)  
+- `>>` : input operator (reading)
+
+[Back to Top](#Contents)
+
 ### Exception Handling
 
 ### Dynamic Memory  
