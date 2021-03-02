@@ -92,7 +92,7 @@ std::cout << *pointer; //access value of var through "*" pointer
 
 ### References
 
-A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable. 
+A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable.  
 
 [Back to Top](#Contents)
 
@@ -314,7 +314,7 @@ abstraction is controlled with access labels `private, public, protected`.  You 
 
 ### Encapsulation  
 
-Similar to the purpose of abstraction, we want to hide all data and functions that the public doesn't need to see or know about.  This ensures our software is secure and can't easily be manipulated or penetrated by someone with malice intent.  You already know about this. 
+Similar to the purpose of abstraction, we want to hide all data and functions that the public doesn't need to see or know about.  This ensures our software is secure and can't easily be manipulated or penetrated by someone with malice intent.  You already know about this.  
 
 [Back to Top](#Contents)
 
