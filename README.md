@@ -12,8 +12,8 @@ It's been a while. Some review:
   - [Pointers to Structures](#Pointers-to-Structures)
 - [OOP with Cpp](#OOP-with-Cpp)
   - [Inheritance](#Inheritance)
-  - [Overloading Functions](#Overloading-(Functions))
-  - [Overloading Operators](#Overloading-(Operators))
+  - [Overloading Functions](#Overloading-Functions)
+  - [Overloading Operators](#Overloading-Operators)
   - [Polymorphism](#Polymorphism)
   - [Abstraction](#Abstraction)
   - [Encapsulation](#Encapsulation)
@@ -189,7 +189,7 @@ int main() {
 
 [Back to Top](#Contents)
 
-### Overloading (Functions)
+### Overloading Functions
 
 Function overloading obvious:
 
@@ -206,7 +206,7 @@ int add(int a, int b, int c) {
 
 [Back to Top](#Contents)
 
-### Overloading (Operators)
+### Overloading Operators
 
 Built-in operators can be overloaded using the ```operator``` keyword followed by the defining operator, Ex: ```operator+```.
 This is used mainly to perform some operation on object and return something. See overloading.cpp for example.
