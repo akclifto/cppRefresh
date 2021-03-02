@@ -12,8 +12,8 @@ It's been a while. Some review:
   - [Pointers to Structures](#Pointers-to-Structures)
 - [OOP with Cpp](#OOP-with-Cpp)
   - [Inheritance](#Inheritance)
-  - [Overloading Functions](<#Overloading-(Functions)>)
-  - [Overloading Operators](<#Overloading-(Operators)>)
+  - [Overloading Functions](#Overloading-(Functions))
+  - [Overloading Operators](#Overloading-(Operators))
   - [Polymorphism](#Polymorphism)
   - [Abstraction](#Abstraction)
   - [Encapsulation](#Encapsulation)
@@ -209,7 +209,7 @@ int add(int a, int b, int c) {
 ### Overloading (Operators)
 
 Built-in operators can be overloaded using the ```operator``` keyword followed by the defining operator, Ex: ```operator+```.
-This is used mainly to perform some operation on object and return something.
+This is used mainly to perform some operation on object and return something. See overloading.cpp for example.
 
 |Overloadable operators | | | | | |  
 |:-:|:---:|:---:|:---:|:---:|:---:|
@@ -238,8 +238,12 @@ This is called `static resolution`, or `static linkage`.  This causes the functi
 
 ```cpp
 class baseClass {
+    
     ...
-    virtual int area() {  // use `virtual` keyword to tell compiler to look for the contents of the pointer instead of its type, stops static linkage.
+    
+    // use `virtual` keyword to tell compiler to look for the contents of the pointer instead of its type, 
+    // stops static linkage.
+    virtual int area() {  
         ... //return something specific to this base class.
     }
 };
@@ -321,7 +325,8 @@ Interfaces describe behavior and capabilities of classes without giving implemen
 ```cpp
 class Shape {
     public:
-        virtual double getVolume() = 0; //pure virtual functions that have no meaningful use in the base class.
+        //pure virtual functions that have no meaningful use in the base class.
+        virtual double getVolume() = 0; 
         virtual int getIndex() = 0;
     private:
         double l, w, h; // hidden variables needed to implement class.
