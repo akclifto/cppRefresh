@@ -185,12 +185,12 @@ int add(int a, int b, int c) {
 Built-in operators can be overloaded using the ```operator``` keyword followed by the defining operator, Ex: ```operator+```.
 This is used mainly to perform some operation on object and return something.
 
-Overloadable functions | | | | | |  
-:---:|:---:|:---:|:---:|:---:|:---:|
-+  |  -  |  *  |  /  |  %  |  ^  |
-&  | `|` | 	~  |  !  |  ,  |  =  |
-<  |  >  |  <= |  >= |  ++ |  -- |
-<< |  >> |  == |  != |  && |  || |
-+= |  -= |  /= |  %= |  ^= |  &= |
-|= |  *= | <<= | >>= |  [] |  () |
--> | ->* | new | new [] | delete | dlete []
+|Overloadable functions | | | | | |  
+|:-:|:---:|:---:|:---:|:---:|:---:|
+| +  |  -  |  *  |  /  |  %  |  ^  |
+| &  | `|` |  ~  |  !  |  ,  |  =  |
+| <  |  >  |  <= |  >= |  ++ |  -- |
+| << |  >> |  == |  != |  && |  || |
+| += |  -= |  /= |  %= |  ^= |  &= |
+| |= |  *= | <<= | >>= |  [] |  () |
+| -> | ->* | new | new [] | delete | delete []
