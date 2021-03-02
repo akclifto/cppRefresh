@@ -504,7 +504,7 @@ if( !(value = new double)) {
 `malloc()` exists in Cpp but is not advised to use it.  The `new` keyword replaces `malloc()` and is better than using `malloc()`.
 The advantage of `new` is that it allocates memory and also constructs objects for you.  This is OOP and the very purpose of Cpp's creation: to be OOP.
 
-Array allocation:
+#### Array allocation
 
 ```cpp
 // standard array
@@ -516,7 +516,7 @@ arr = new char[20];
 delete [] arr; // free up when done.
 ```
 
-Multi-dimensional array allocation:
+#### Multi-dimensional array allocation 
 
 ```cpp
 // using double pointer here for dimension pointer.
@@ -533,7 +533,8 @@ delete [] mdArr; // free up remaining var.
 
 ```
 
-Dynamic allocation for objects:  
+#### Dynamic allocation for objects
+
 Use constructors and destructors to dynamically allocate object memory
 
 ```cpp
