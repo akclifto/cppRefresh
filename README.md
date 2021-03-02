@@ -55,6 +55,8 @@ Examples of TYPES of integer literals:
 30ul       // unsigned long
 ```
 
+[Back to Top](#Contents)
+
 ### Floating Point Literals
 
 A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent part. You can represent floating point literals either in decimal form or exponential form.
@@ -68,6 +70,8 @@ While representing using decimal form, you must include the decimal point, the e
 210f          // Illegal: no decimal or exponent
 .e55          // Illegal: missing integer or fraction
 ```
+
+[Back to Top](#Contents)
 
 ### Pointers
 
@@ -84,9 +88,11 @@ pointer = &var;     // set pointer to address of var
 std::cout << *pointer; //access value of var through "*" pointer
 ```
 
+[Back to Top](#Contents)
+
 ### References
 
-A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable.
+A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable. [Back to Top](#Contents)
 
 #### Differences between References and Pointers
 
@@ -99,6 +105,8 @@ int i = 5;      // variable
 int &k = i;     // initialize reference to i
 std:cout << k << std::endl; // access value of k reference, which is same as i;
 ```
+
+[Back to Top](#Contents)
 
 ### Pointers to Structures
 
@@ -135,13 +143,15 @@ pint32 x,y,z; // x,y,z are all pointers to long int
 
 ## OOP with Cpp
 
-This section will provide general syntax structure for OOP in C++.
+This section will provide general syntax structure for OOP in C++. [Back to Top](#Contents)
 
 ### Inheritance
 
 A base class is the parent class. A derived class is the inheriting class to the base class. A derived class can inherit from multiple base classes.  
 Syntax: `class derived-class-name: access-specifier base-class-name`  
 Example: `class someInheritedClass: public someBaseClass, public someOtherBaseClass`
+
+[Back to Top](#Contents)
 
 #### Warning
 
@@ -175,6 +185,8 @@ int main() {
 }
 ```
 
+[Back to Top](#Contents)
+
 ### Overloading (Functions)
 
 Function overloading obvious:
@@ -189,6 +201,8 @@ int add(int a, int b, int c) {
     return a + b + c;
 }
 ```
+
+[Back to Top](#Contents)
 
 ### Overloading (Operators)
 
@@ -208,6 +222,8 @@ This is used mainly to perform some operation on object and return something.
 |Non-overloadable operators| | | |
 | :-:| :-:| :-:| :-:|
 | :: | .* | .  | ?: |
+
+[Back to Top](#Contents)
 
 ### Polymorphism
 
@@ -264,6 +280,8 @@ The `virtual` keyword tells the compiler that you don't want to use `static link
 virtual int area() = 0;
 ```
 
+[Back to Top](#Contents)
+
 ### Abstraction
 
 Only essential information makes it out to the public.  Everything else stays hidden, or working in the background.  This is typically done by  
@@ -284,15 +302,15 @@ int main() {
 `cout` console prints something to the screen. How does `cout` work? Don't know. Do you care how it works?  Probably not. Has it changed how it's been  
 implemented over time?  Absolutely.  That's abstraction at work.  You don't need ot under how it console prints to the screen, only that it does console print.
 
-abstraction is controlled with access labels `private, public, protected`.  You already know this.  
+abstraction is controlled with access labels `private, public, protected`.  You already know this.  [Back to Top](#Contents)
 
 ### Encapsulation  
 
-Similar to the purpose of abstraction, we want to hide all data and functions that the public doesn't need to see or know about.  This ensures our software is secure and can't easily be manipulated or penetrated by someone with malice intent.  You already know about this.
+Similar to the purpose of abstraction, we want to hide all data and functions that the public doesn't need to see or know about.  This ensures our software is secure and can't easily be manipulated or penetrated by someone with malice intent.  You already know about this. [Back to Top](#Contents)
 
 ### Interfaces
 
-Interfaces describe behavior and capabilities of classes without giving implementation or design away. This
+Interfaces describe behavior and capabilities of classes without giving implementation or design away.
 
 ```cpp
 class Shape {
@@ -305,6 +323,8 @@ class Shape {
 ```
 
 pure virtual functions force derived classes to override them to implement.  If you fail to override the pure virtual function in a derived class, you cannot instantiate any objects; you will get a compilation error. Classes that can be used to instantiate objects are called `concrete classes`.  
+
+[Back to Top](#Contents)
 
 ## Deeper Topics
 
