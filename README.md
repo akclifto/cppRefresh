@@ -17,6 +17,13 @@ It's been a while. Some review:
   - [Polymorphism](#Polymorphism)
   - [Abstraction](#Abstraction)
   - [Encapsulation](#Encapsulation)
+  - [Interfaces](#Interfaces)
+- [Deeper Topics](#Deeper-Topics)
+  - [Files and Streams](#Files-and-Streams)
+  - [Exception Handling](#Exception-Handling)
+  - [Dynamic Memory](#Dynamic-Memory)
+  - [Namespaces](#Namespaces)
+  - [Templates](#Templates)
 
 ## Cpp Overview
 
@@ -281,3 +288,32 @@ abstraction is controlled with access labels `private, public, protected`.  You 
 
 ### Encapsulation  
 
+Similar to the purpose of abstraction, we want to hide all data and functions that the public doesn't need to see or know about.  This ensures our software is secure and can't easily be manipulated or penetrated by someone with malice intent.  You already know about this.
+
+### Interfaces
+
+Interfaces describe behavior and capabilities of classes without giving implementation or design away. This
+
+```cpp
+class Shape {
+    public:
+        virtual double getVolume() = 0; //pure virtual functions that have no meaningful use in the base class.
+        virtual int getIndex() = 0;
+    private:
+        double l, w, h; // hidden variables needed to implement class.
+}
+```
+
+pure virtual functions force derived classes to override them to implement.  If you fail to override the pure virtual function in a derived class, you cannot instantiate any objects; you will get a compilation error. Classes that can be used to instantiate objects are called `concrete classes`.  
+
+## Deeper Topics
+
+### Files and Streams
+
+### Exception Handling
+
+### Dynamic Memory  
+
+### Namespaces
+
+### Templates
