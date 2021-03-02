@@ -15,6 +15,8 @@ It's been a while. Some review:
   - [Overloading Functions](<#Overloading-(Functions)>)
   - [Overloading Operators](<#Overloading-(Operators)>)
   - [Polymorphism](#Polymorphism)
+  - [Abstraction](#Abstraction)
+  - [Encapsulation](#Encapsulation)
 
 ## Cpp Overview
 
@@ -254,3 +256,28 @@ The `virtual` keyword tells the compiler that you don't want to use `static link
 ```cpp
 virtual int area() = 0;
 ```
+
+### Abstraction
+
+Only essential information makes it out to the public.  Everything else stays hidden, or working in the background.  This is typically done by  
+separating interface and implentation as an intentful design technique.  For example, you make a sort algorithm to public use.  The public can use
+it without knowing how the sort() function is implemented.  You can change the algorithm and the public wouldn't know because they can't (and shouldn't be able to) access its implementation.  
+
+Easy example: std::cout from iostream in cpp library
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "How does cout work?" << std::endl;
+    return 0;
+}
+```
+
+`cout` console prints something to the screen. How does `cout` work? Don't know. Do you care how it works?  Probably not. Has it changed how it's been  
+implemented over time?  Absolutely.  That's abstraction at work.  You don't need ot under how it console prints to the screen, only that it does console print.
+
+abstraction is controlled with access labels `private, public, protected`.  You already know this.  
+
+### Encapsulation  
+
