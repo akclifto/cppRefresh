@@ -378,6 +378,34 @@ To close a file, `void close();`
 - `<<` : output operator (writing)  
 - `>>` : input operator (reading)
 
+#### Positioning Within Streams
+
+- `seekg` (seek get) : used for ifstream
+- `seekp` (seek put) : used for ofstream
+
+Both `seekg` and `seekp` are usually long integers.  A second argument is used to indicate direction of the seek.
+
+- `ios::beg` : the default position relative to the beginning of the stream.
+- `ios::cur` : position relative to the current position in the stream.
+- `ios::end` : position relative to the end of the stream
+
+Examples:
+
+```cpp
+// position at nth byte of fileObject (assumes ios::beg)
+fileObject.seekg(n);
+
+// position n bytes forward in fileObject
+fileObject.seekg(n, ios::cur)
+
+
+// position n bytes back from end of fileObject
+fileObject.seekg(n, ios::end);
+
+// position at end of fileObject
+fileObject.seekg(0, ios::end);
+```
+
 [Back to Top](#Contents)
 
 ### Exception Handling
