@@ -410,7 +410,71 @@ fileObject.seekg(0, ios::end);
 
 ### Exception Handling
 
+Try/catch/throw the same as Java:
+
+```cpp
+
+void function(int a, int b){
+    
+    if( a == 0 || b == 0) {
+        throw "Some error";
+    }
+    try {
+
+        // some code to protect from error
+
+    } catch (const char *errorMessage) {
+
+        // some code to handle error
+
+        std::cerr << errorMessage << std::endl;
+    }
+}
+
+//custom exception handling
+struct MyException : public exception {
+    const char *what() const throw() {
+        return "Customer expection message";
+    }
+}
+
+// use customer exception
+void anotherFunction(int a) {
+    try {
+
+    } catch (MyException &e) {
+        std::cout << "Custom exception caught" << std::endl;
+        //using what() here gets the message by overriding expception class what()
+        std::cout << e.what() << std::endl;  
+    } catch (std::exception &e) {
+        // other std error handling
+    }
+}
+```
+
+#### Standard Exception Types and Descriptions
+
+- `std::exception` : An exception and parent class of all the standard C++ exceptions.
+- `std::bad_alloc` : This can be thrown by `new`.
+- `std::bad_cast` : This can be thrown by `dynamic_cast`.
+- `std::bad_exception` : This is useful device to handle unexpected exceptions in a C++ program.
+- `std::bad_typeid`: This can be thrown by `typeid`.
+- `std::logic_error` : An exception that theoretically can be detected by reading the code.
+- `std::domain_error` : This is an exception thrown when a mathematically invalid domain is used.
+- `std::invalid_argument` : This is thrown due to invalid arguments.
+- `std::length_error` : This is thrown when a too big std::string is created.
+- `std::out_of_range` : This can be thrown by the 'at' method, for example a `std::vector` and `std::bitset<>::operator[]()`.
+- `std::runtime_error` : An exception that theoretically cannot be detected by reading the code.
+- `std::overflow_error` : This is thrown if a mathematical overflow occurs.
+- `std::range_error` : This is occurred when you try to store a value which is out of range.
+- `std::underflow_error` : This is thrown if a mathematical underflow occurs.
+  - underflow: that is, situations where the result of a computation is a subnormal floating-point value.
+
+[Back to Top](#Contents)
+
 ### Dynamic Memory  
+
+`The Good Stuff`
 
 ### Namespaces
 
