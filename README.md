@@ -14,6 +14,7 @@ It's been a while. Some review:
   - [Inheritance](#Inheritance)
   - [Overloading Functions](<#Overloading-(Functions)>)
   - [Overloading Operators](<#Overloading-(Operators)>)
+  - [Polymorphism](#Polymorphism)
 
 ## Cpp Overview
 
@@ -198,3 +199,58 @@ This is used mainly to perform some operation on object and return something.
 |Non-overloadable operators| | | |
 | :-:| :-:| :-:| :-:|
 | :: | .* | .  | ?: |
+
+### Polymorphism
+
+A call to a member function will cause a different function to executed depending on the type  
+of object that invokes the function (based on class hierarchy and related inheritance).  
+
+Issues can arise in the hierarchy of functions.  A function can be set by the compiler as a version defined in the base class.  
+This is called `static resolution`, or `static linkage`.  This causes the function call to be fixed before program execution  
+(sometimes called `early binding`) because everything is bound during compilation.
+
+```cpp
+class baseClass {
+    ...
+    virtual int area() {  // use `virtual` keyword to tell compiler to look for the contents of the pointer instead of its type, stops static linkage.
+        ... //return something specific to this base class.
+    }
+};
+
+class derivedClass {
+    ...
+    int area() {
+        ... // return something specific to this derived class
+    }
+};
+
+class anotherDerivedClass {
+    ...
+    int area() {
+        ... // return something specific to anotherDerivedClass
+    }
+};
+
+int main() {
+    baseClass *base;
+    derivedClass d;
+    anotherderivedClass a;
+
+    base = &d; //store address of inherited class
+    std::cout << base->area() << std::endl; // outputs function area() specific to derivedclass
+
+    base = &a;
+    std::cout << base->area() << std::endl; // outputs function area() specific to anotherDerivedClass
+
+    return 0;
+}
+```
+
+polymorphism is typically used like this:  differend classed with functions of same name, even same parameters have different implementations.  
+The `virtual` keyword tells the compiler that you don't want to use `static linkage` and instead want to use `dynamic binding`, or `late binding`.
+
+`pure virtual functions` transform the base class functions so no meaningful value comes from it, and ensures use in the derived classes.
+
+```cpp
+virtual int area() = 0;
+```
