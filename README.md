@@ -188,7 +188,7 @@ This is used mainly to perform some operation on object and return something.
 |Overloadable functions | | | | | |  
 |:-:|:---:|:---:|:---:|:---:|:---:|
 | +  |  -  |  *  |  /  |  %  |  ^  |
-| &  | |   |  ~  |  !  |  ,  |  =  |
+| &  | ```|``` |  ~  |  !  |  ,  |  =  |
 | <  |  >  |  <= |  >= |  ++ |  -- |
 | << |  >> |  == |  != |  && |  || |
 | += |  -= |  /= |  %= |  ^= |  &= |
