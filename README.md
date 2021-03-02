@@ -501,8 +501,8 @@ if( !(value = new double)) {
 }
 ```
 
-`malloc()` exists in Cpp but is not advised to use it.  The `new` keyword replaces `malloc()` and is better than using `malloc()`.  
-The advantage of `new` is that is allocates memory and also constructs objects for you.  This is OOP and the very purpose of Cpp's creation: to be OOP.
+`malloc()` exists in Cpp but is not advised to use it.  The `new` keyword replaces `malloc()` and is better than using `malloc()`.
+The advantage of `new` is that it allocates memory and also constructs objects for you.  This is OOP and the very purpose of Cpp's creation: to be OOP.
 
 Array allocation:
 
@@ -523,16 +523,35 @@ Multi-dimensional array allocation:
 double **mdArr = NULL;
 mdArr = new double[4][5];
 
-// use mdArr in consider
+// use mdArr in code
 
-delete [] mdArr; // free up memory when done
+//consider freeing memory at each position in array first, then deleting entire array, like below:
+for(int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+    delete[] mdArr[i];
+}
+delete [] mdArr; // free up remaining var.
 
 ```
 
-Dynamic allocation for objects:
+Dynamic allocation for objects:  
+Use constructors and destructors to dynamically allocate object memory
 
 ```cpp
+class Box {
+   public:
+      Box() { 
+         std::cout << "Constructor called!" << std::endl; 
+      }
+      ~Box() { 
+         std::cout << "Destructor called!" << std::endl; 
+      }
+};
+int main() {
+   Box* myBoxArray = new Box[2];
+   delete [] myBoxArray; // Delete array
 
+   return 0;
+}
 ```
 
 ### Namespaces
