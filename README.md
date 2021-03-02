@@ -12,8 +12,8 @@ It's been a while. Some review:
   - [Pointers to Structures](#Pointers-to-Structures)
 - [OOP with Cpp](#OOP-with-Cpp)
   - [Inheritance](#Inheritance)
-  - [Overloading Functions](#Overloading-(Functions))
-  - [Overloading Operators](#Overloading-(Operators))
+  - [Overloading Functions](<#Overloading-(Functions)>)
+  - [Overloading Operators](<#Overloading-(Operators)>)
 
 ## Cpp Overview
 
@@ -129,19 +129,19 @@ This section will provide general syntax structure for OOP in C++.
 
 ### Inheritance
 
-A base class is the parent class. A derived class is the inheriting class to the base class.  A derived class can inherit from multiple base classes.  
-Syntax:  ```class derived-class-name: access-specifier base-class-name```  
-Example: ```class someInheritedClass: public someBaseClass, public someOtherBaseClass```
+A base class is the parent class. A derived class is the inheriting class to the base class. A derived class can inherit from multiple base classes.  
+Syntax: `class derived-class-name: access-specifier base-class-name`  
+Example: `class someInheritedClass: public someBaseClass, public someOtherBaseClass`
 
 #### Warning
 
-It is bad practice to inherit from multiple base classes in the same file.  Doing this can create the diamond pattern inheritance.  It is better to take a linear inheritance approach, and stack base/derived classes.  
+It is bad practice to inherit from multiple base classes in the same file. Doing this can create the diamond pattern inheritance. It is better to take a linear inheritance approach, and stack base/derived classes.
 
 ```cpp
 class baseClass {
     public:
-        void setName(std::string n) {  
-            name = n; //ensure the input name param is different from the name var 
+        void setName(std::string n) {
+            name = n; //ensure the input name param is different from the name var
             // (ie, `name = name` will produce null)
         }
 
@@ -167,4 +167,31 @@ int main() {
 
 ### Overloading (Functions)
 
+Function overloading obvious:
+
+```cpp
+int add(int a, int b) {
+    return a + b;
+}
+
+// overload add
+int add(int a, int b, int c) {
+    return a + b + c;
+}
+```
+
 ### Overloading (Operators)
+
+Built-in operators can be overloaded using the ```operator``` keyword followed by the defining operator, Ex: ```operator+```.
+This is used mainly to perform some operation on object and return something.
+
+Overloadable functions:
+
+---|-----|-----|-----|-----|-----|
++  |  -  |  *  |  /  |  %  |  ^  |
+&  | `|` | 	~  |  !  |  ,  |  =  |
+<  |  >  |  <= |  >= |  ++ |  -- |
+<< |  >> |  == |  != |  && |  || |
++= |  -= |  /= |  %= |  ^= |  &= |
+|= |  *= | <<= | >>= |  [] |  () |
+-> | ->* | new | new [] | delete | dlete []
