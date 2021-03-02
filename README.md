@@ -92,7 +92,9 @@ std::cout << *pointer; //access value of var through "*" pointer
 
 ### References
 
-A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable. [Back to Top](#Contents)
+A reference variable is an alias, that is, another name for an already existing variable. Once a reference is initialized with a variable, either the variable name or the reference name may be used to refer to the variable. 
+
+[Back to Top](#Contents)
 
 #### Differences between References and Pointers
 
@@ -143,7 +145,7 @@ pint32 x,y,z; // x,y,z are all pointers to long int
 
 ## OOP with Cpp
 
-This section will provide general syntax structure for OOP in C++. [Back to Top](#Contents)
+This section will provide general syntax structure for OOP in C++.
 
 ### Inheritance
 
@@ -302,11 +304,15 @@ int main() {
 `cout` console prints something to the screen. How does `cout` work? Don't know. Do you care how it works?  Probably not. Has it changed how it's been  
 implemented over time?  Absolutely.  That's abstraction at work.  You don't need ot under how it console prints to the screen, only that it does console print.
 
-abstraction is controlled with access labels `private, public, protected`.  You already know this.  [Back to Top](#Contents)
+abstraction is controlled with access labels `private, public, protected`.  You already know this.  
+
+[Back to Top](#Contents)
 
 ### Encapsulation  
 
-Similar to the purpose of abstraction, we want to hide all data and functions that the public doesn't need to see or know about.  This ensures our software is secure and can't easily be manipulated or penetrated by someone with malice intent.  You already know about this. [Back to Top](#Contents)
+Similar to the purpose of abstraction, we want to hide all data and functions that the public doesn't need to see or know about.  This ensures our software is secure and can't easily be manipulated or penetrated by someone with malice intent.  You already know about this. 
+
+[Back to Top](#Contents)
 
 ### Interfaces
 
