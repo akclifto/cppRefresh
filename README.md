@@ -562,7 +562,7 @@ int main() {
 
 ### Namespaces
 
-Pretty straightforward.
+Pretty straightforward.  Use namespaces to further organize your code.
 
 ```cpp
 namespace some_namespace {
@@ -578,15 +578,29 @@ int main() {
 }
 ```
 
-This will output the `func()` inside namespace called `some_namespace`.
+This will output the `func()` inside namespace called `some_namespace`. See `namespaces.cpp` example in src.
 
-Avoid using namespace std;  This is okay for simple programs but can cause problems in larger, more complex programs that use thrid party libraries. Use `std::<param>` (Ex: `std::cout`, `std::cin`, `std::endl`, etc.) instead.
+Avoid using namespace std;  This is okay for simple programs but can cause problems in larger, more complex programs that use thrid party libraries. Use `std::<param>` (Ex: `std::cout`, `std::cin`, `std::endl`, `std::string`, etc.) instead.
 
 [Back to Top](#Contents)
 
 ### Templates
 
+Templates are the foundation for generic programming, and necessary to write code such that it is independent of any type.  It is a blueprint for a generic class or function.  The cpp library iterators are examples of templates.  For example, the `vector` class container has a single definition, but there are many types of vectors => `vector<int>`, `vector<string>`, etc.
 
+General form:
+
+```cpp
+template <class type> return-type function-name(parameter list) {
+    /// body of function or class
+}
+```
+
+Example:
+
+```cpp
+
+```
 
 ### PreProcessor
 
