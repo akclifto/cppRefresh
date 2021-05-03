@@ -29,7 +29,6 @@ It's been a while. Some review:
   - [Multi Threading](#Multi-Threading)
   - [Web Programming](#Web-Programming)
   
-
 ## Cpp Overview
 
 ### Integer Literals
@@ -521,7 +520,7 @@ arr = new char[20];
 delete [] arr; // free up when done.
 ```
 
-#### Multi-dimensional array allocation 
+#### Multi-dimensional array allocation
 
 ```cpp
 // using double pointer here for dimension pointer.
