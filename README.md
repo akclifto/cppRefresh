@@ -26,6 +26,8 @@ It's been a while. Some review:
   - [Templates](#Templates)
   - [PreProcessor](#PreProcessor)
   - [Signal Handling](#Signal-Handling)
+  - [Multi Threading](#Multi-Threading)
+  - [Web Programming](#Web-Programming)
   
 
 ## Cpp Overview
@@ -606,8 +608,38 @@ inline T const &Max(T const &a, T const &b)
 }
 ```
 
-See `template_function.cpp` example for use example usage.
+See `template_function.cpp` for example usage.
+
+Example of class template: `
+
+```cpp
+template <class T>
+class Stack
+{
+private:
+    std::vector<T> elems; // elements
+
+public:
+    void push(T const &); //push the elems
+    void pop();           // pop an element
+    T top() const;        //return the top element
+
+    bool empty() const { return elems.empty(); } // check if stack is empty.
+};
+```
+
+See `template_class.cpp` for example usage.
+
+[Back to Top](#Contents)
 
 ### PreProcessor
 
+[Back to Top](#Contents)
+
 ### Signal-Handling
+
+[Back to Top](#Contents)
+
+### Multi Threading
+
+### Web Programming
