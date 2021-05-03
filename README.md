@@ -596,11 +596,17 @@ template <class type> return-type function-name(parameter list) {
 }
 ```
 
-Example:
+Example of function template:
 
 ```cpp
-
+template <typename T>
+inline T const &Max(T const &a, T const &b)
+{
+    return a < b ? b : a;
+}
 ```
+
+See `template_function.cpp` example for use example usage.
 
 ### PreProcessor
 
