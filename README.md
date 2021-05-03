@@ -24,6 +24,9 @@ It's been a while. Some review:
   - [Dynamic Memory](#Dynamic-Memory)
   - [Namespaces](#Namespaces)
   - [Templates](#Templates)
+  - [PreProcessor](#PreProcessor)
+  - [Signal Handling](#Signal-Handling)
+  
 
 ## Cpp Overview
 
@@ -533,7 +536,7 @@ delete [] mdArr; // free up remaining var.
 
 ```
 
-#### Dynamic allocation for objects
+#### Object allocation
 
 Use constructors and destructors to dynamically allocate object memory
 
@@ -559,4 +562,32 @@ int main() {
 
 ### Namespaces
 
+Pretty straightforward.
+
+```cpp
+namespace some_namespace {
+    func() {
+        std::cout << "Using some namespace functions" << std::endl;
+    }
+}
+using namespace some_namespace;
+
+int main() {
+    func();
+    return 0;
+}
+```
+
+This will output the `func()` inside namespace called `some_namespace`.
+
+Avoid using namespace std;  This is okay for simple programs but can cause problems in larger, more complex programs that use thrid party libraries. Use `std::<param>` (Ex: `std::cout`, `std::cin`, `std::endl`, etc.) instead.
+
+[Back to Top](#Contents)
+
 ### Templates
+
+
+
+### PreProcessor
+
+### Signal-Handling
