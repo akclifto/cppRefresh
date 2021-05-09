@@ -633,6 +633,32 @@ See `template_class.cpp` for example usage.
 
 ### PreProcessor
 
+Preprocessors are directives that give instructions to the compiler before compilation occurs.  The directives begin with the pound symbol (`#`), and have been used with every example written so far (`#include`). Others include `#define, #if, #else, #line, #endif`.
+
+#### #include
+
+This is used to include a header file into the source file.
+
+#### #define
+
+This creates a symbolic constant.  The constant, `#define macro-name replacement-text`.  Example,
+
+```cpp
+#include <iostream>
+using namespace std;
+
+#define PI 3.14159
+
+int main() {
+    cout << "PI definition: " << PI << endl;
+    return 0;
+}
+```
+
+#### defining function-like macros
+
+
+
 [Back to Top](#Contents)
 
 ### Signal-Handling
