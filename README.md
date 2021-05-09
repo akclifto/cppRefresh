@@ -800,4 +800,12 @@ This will automatically interrupt the program once i == 3.
 
 ### Multi Threading
 
+Not going to explain multi-threading here, should be known.  C++ does not contain any built-in support for multi-threaded applications. It instead relies entirely on the operating system to provide this feature. The example assumed using Linux with POSIX pthread example (recall from operating systems course SER334), I am writing this on Windows OS.
+
+So I will have to revisit this section unfortunately.
+
+[Back to Top](#Contents)
+
 ### Web Programming
+
+[Back to Top](#Contents)
