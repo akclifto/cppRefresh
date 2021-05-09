@@ -738,7 +738,7 @@ Some signals cannot be caught, but some can and here is a list to take appropria
 - `SIGSEGV` : Invalid access to storage (segmentation fault)
 - `SIGTERM` : A termination request sent to program.
 
-#### signal() function
+#### The signal() function
 
 This signal() function is used to trap unexpected events, structure:
 
