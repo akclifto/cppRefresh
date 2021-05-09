@@ -657,7 +657,38 @@ int main() {
 
 #### defining function-like macros
 
+```cpp
+//ternary operator that returns minimum value between to inputs. Macro-name = MIN(a,b) replacement-text = (((a) < (b)) ? a : b)
+#define MIN(a,b) (((a) < (b)) ? a : b)
+```
 
+#### conditional compilations
+
+```cpp
+//if NULL is not defined (ifndef), define it, then end if (endif)
+#ifndef NULL
+    #define NULL 0
+#endif
+```
+
+#### debugging
+
+This can be done with a single macro to turn on debugging:
+
+```cpp
+// If #define DEBUG has been defined before #ifdef DEBUG, cerr statement will be compiled.
+#ifdef DEBUG
+    cerr << "Variable x = " << x << endl;
+#endif
+```
+
+To skip code from running (like debugging), use following structure:
+
+```cpp
+#if 0
+    some code prevented from compiling
+#endif
+```
 
 [Back to Top](#Contents)
 
