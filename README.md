@@ -690,6 +690,39 @@ To skip code from running (like debugging), use following structure:
 #endif
 ```
 
+#### The # and ## operators
+
+The # operator causes the replacement-text token to be converted to a string surrounded by quotes. Example,
+
+```cpp
+#define MKSTR(x) #x
+
+int main() {
+    std::cout << MKSTR(HELLO C++) << std::endl;
+    return 0;
+}
+```
+
+The ## operator is used to concatenate two tokens, Example,
+
+```cpp
+#define CONCAT(x,y) x ## y
+
+int main() {
+    int xy = 200;
+
+    cout << CONCAT(x,y) << endl; // This is transformed into xy, hence outputting the int variable xy.
+    return 0;
+}
+```
+
+#### Predefined C++ macros
+
+- `__LINE__` : This contains the current line number of the program when it is being compiled.
+- `__FILE__` : This contains the current file name of the program when it is being compiled.
+- `__DATE__` : This contains a string of the form `month/day/year` that is the date of the translation of the source file into object code.
+- `__TIME__` : This contains a string of the form `hour:minute:second` that is the time which the program was compiled
+
 [Back to Top](#Contents)
 
 ### Signal-Handling
