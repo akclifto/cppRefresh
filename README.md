@@ -808,4 +808,8 @@ So I will have to revisit this section unfortunately.
 
 ### Web Programming
 
+Yes, you can write a web program with C++.  CGI, or common gateway interface is a set of standards that define how information is exchanged between a web server and a custom script. CGI specs are maintained by NCSA.  This dictates external programs to interface with server like HTTP servers.  This appears to require constructing web pages in c++ (sort of like old NODE JS HTTP server pages without using any JS on the front).
+
+This example used apache web services that allows you to use any CGI you want. I will not proceed with this section, because I think it is irrelevant. Using Node or Java Spring is more likely in a real-world application, and has a lot of support.
+
 [Back to Top](#Contents)
